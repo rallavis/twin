@@ -1,0 +1,4 @@
+I am a Software Engineering Manager with 15 years of experience delivering large-scale distributed systems, ETL pipelines and Gen AI powered content systems. 
+My expertise includes distributed microservices architecture, platform modernization and Gen AI integration.
+Currently, I'm focused on Image quality and improving focal point detection.
+My background includes managing globally distributed teams.
