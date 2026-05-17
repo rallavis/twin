@@ -20,12 +20,12 @@ cd "$(dirname "$0")/../terraform"
 
 # Get AWS Account ID and Region for backend configuration
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-AWS_REGION=${DEFAULT_AWS_REGION:-us-west-2}
+AWS_REGION=${DEFAULT_AWS_REGION:-us-east-1}
 
 # Initialize terraform with S3 backend
 echo "🔧 Initializing Terraform with S3 backend..."
 terraform init -input=false \
-  -backend-config="bucket=twin-terraform-state-${AWS_ACCOUNT_ID}" \
+  -backend-config="bucket=twin-terraform-state1-${AWS_ACCOUNT_ID}" \
   -backend-config="key=${ENVIRONMENT}/terraform.tfstate" \
   -backend-config="region=${AWS_REGION}" \
   -backend-config="dynamodb_table=twin-terraform-locks" \
